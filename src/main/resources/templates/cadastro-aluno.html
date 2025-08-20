@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Aluno</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/register-student.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Cadastro de Aluno</h1>
+
+    <form action="/alunos/salvar" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <div class="inline-group">
+            <div class="form-control">
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" required>
+            </div>
+            <div class="form-control">
+                <label for="genero">Gênero:</label>
+                <input type="text" id="genero" name="genero" required>
+            </div>
+            <div class="form-control">
+                <label for="altura">Altura:</label>
+                <input type="number" step="0.01" id="altura" name="altura" required>
+            </div>
+        </div>
+
+        <label for="entidade">Entidade:</label>
+        <input type="text" id="entidade" name="entidade" required>
+
+        <label for="talentos">Talentos (separados por vírgula):</label>
+        <input type="text" id="talentos" name="talentos" required>
+
+        <label for="habilidades">Habilidades (separadas por vírgula):</label>
+        <input type="text" id="habilidades" name="habilidades" required>
+
+        <div class="button-group">
+            <button type="submit" class="btn-success">Cadastrar</button>
+            <button type="button" class="btn-secondary" onclick="window.location.href='/'">Voltar</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
