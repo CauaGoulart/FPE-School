@@ -1,0 +1,33 @@
+.teacher-cards {
+  margin-top: 50px;
+  padding: 40px;
+  text-align: center;
+}
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-paper {
+  background: #fff;
+  border: 2px dashed #222;
+  box-shadow: 4px 4px 0px #999;
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s ease;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.card-paper:hover {
+  transform: rotate(-1deg) scale(1.02);
+}
+
+.card-paper img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px dashed #aaa;
+  margin-bottom: 10px;
+}
