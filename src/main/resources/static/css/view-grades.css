@@ -1,0 +1,98 @@
+/* /css/my-grades.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 30px 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 30px;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.table {
+    width: 90%;
+    max-width: 600px;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table th,
+.table td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+}
+
+.table tbody tr:hover {
+    background-color: #f9f9f9;
+    transition: 0.2s;
+}
+
+.info-message {
+    color: #dc3545;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px auto;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    font-weight: 600;
+    border: 2px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background-color: black;
+    color: white;
+}
