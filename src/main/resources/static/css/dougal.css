@@ -1,0 +1,99 @@
+/* dougal.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+body {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 60px auto;
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+h1, h2 {
+    color: #cfcfcf;
+}
+
+.dougal-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.dougal-profile img {
+    width: 160px;
+    border-radius: 10px;
+    border: 2px solid #888;
+}
+
+.profile-info {
+    text-align: left;
+}
+
+.advice-box {
+    background-color: #3c3c3c;
+    border-left: 5px solid #888;
+    margin: 30px 0;
+    padding: 20px;
+    font-style: italic;
+    position: relative;
+}
+
+.advice-box::before {
+    content: '\201C';
+    font-size: 40px;
+    color: #777;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #888;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #aaa;
+    color: #000;
+}
+
+/* Soft glitch flicker */
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+    }
+    20%, 22%, 24%, 55% {
+        opacity: 0.8;
+    }
+}
+
+.container {
+    animation: flicker 3s infinite;
+}
+
+.dougal-quote {
+    color: #888888;
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 20px;
+}
