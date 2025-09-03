@@ -29,14 +29,14 @@ public class NotaController {
 
     @GetMapping("/selecionar")
     public String selecionarAlunoParaNotas(Model model) {
-        List<Aluno> alunos = alunoService.listarTodos();
+        List<Aluno> alunos = alunoService.findAll();
         model.addAttribute("alunos", alunos);
         return "selecionar-aluno"; // Página para selecionar um aluno
     }
 
     @GetMapping("/aluno")
     public String listarNotasAluno(@RequestParam Long alunoId, Model model) {
-        Optional<Aluno> aluno = alunoService.buscarPorId(alunoId);
+        Optional<Aluno> aluno = alunoService.findById(alunoId);
 
         if (aluno.isEmpty()) {
             return "redirect:/notas/selecionar?erro=aluno_nao_encontrado"; // Se o aluno não existir, volta à seleção
@@ -51,7 +51,7 @@ public class NotaController {
 
     @GetMapping("/cadastro-nota")
     public String formularioCadastroNota(Model model) {
-        model.addAttribute("alunos", alunoService.listarTodos());
+        model.addAttribute("alunos", alunoService.findAll());
         model.addAttribute("professores", professorService.listarTodos());
         return "cadastro-nota";
     }
@@ -60,7 +60,7 @@ public class NotaController {
     public String salvarNota(@RequestParam Long alunoId, @RequestParam Long professorId,
                              @RequestParam String materia, @RequestParam Double nota) {
 
-        Optional<Aluno> aluno = alunoService.buscarPorId(alunoId);
+        Optional<Aluno> aluno = alunoService.findById(alunoId);
         Optional<Professor> professor = professorService.buscarPorId(professorId);
 
         if (aluno.isEmpty() || professor.isEmpty()) {
